@@ -1,4 +1,4 @@
-#include <ftNess.h>
+#include <melee/ft/chara/ftNess/ftNess.h>
 
 extern void func_802AA054(HSD_GObj*, Vec3*, Vec3*, f32, f32);
 
@@ -37,7 +37,7 @@ void ftNess_ItemPKFireSpawn(HSD_GObj* fighter_gobj) //* Ness's PK Fire spawn fun
         ItemBonePos.y += ness_attr->x34_PKFIRE_SPAWN_Y;
         ItemBonePos.z = 0.0f;
 
-        if (fp->xE0_ground_or_air == AIR)
+        if (fp->xE0_ground_or_air == GA_Air)
         {
             PKFireLaunch = ness_attr->x20_PKFIRE_AERIAL_LAUNCH_TRAJECTORY;
             PKFireVel = ness_attr->x24_PKFIRE_AERIAL_VELOCITY;

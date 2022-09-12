@@ -134,14 +134,12 @@ void func_80076528(HSD_GObj* fighter_gobj) // Combo count something + adjust Top
     if (temp_r3 != 0)
     {
         fp->x2092 = (u16)(temp_r3 - 1);
-        if ((fp->x1A58_interactedFighter == NULL) && (fp->xE0_ground_or_air == GROUND))
+        if ((fp->x1A58_interactedFighter == NULL) && (fp->xE0_ground_or_air == GA_Ground))
         {
             comboCount_Push(fp);
         }
     }
 }
-
-extern struct r13_EntityPointers* lbl_804D782C;
 
 // 0x800765AC //
 // https://decomp.me/scratch/IPBrx //

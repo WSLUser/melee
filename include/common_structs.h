@@ -26,12 +26,6 @@
 #define MPCOLL_RIGHTWALL 0x3F
 #define MPCOLL_CEIL 0x6000
 
-
-// STATE FLAGS //
-
-#define GROUND 0
-#define AIR 1 // Used by fighters and items //
-
 typedef struct _Vec2 { float x, y; } Vec2;
 
 struct DemoMotionSymbols
@@ -46,7 +40,8 @@ struct DemoMotionFiles
 
 typedef Vec Vec3;
 
-typedef struct _UnkFlagStruct {
+typedef union _UnkFlagStruct {
+    u8 u8;
     struct {
         u8 b0 : 1;
         u8 b1 : 1;
@@ -130,5 +125,10 @@ struct r13_ColAnimStruct
     u8 x6_unk;
     u8 x7_unk;
 };
+
+typedef enum GroundOrAir {
+    GA_Ground,
+    GA_Air,
+} GroundOrAir;
 
 #endif

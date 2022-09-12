@@ -1,4 +1,4 @@
-#include <ftNess.h>
+#include <melee/ft/chara/ftNess/ftNess.h>
 
 extern void func_8007B8A8(Hitbox*, Vec3*); // Update Hitbox Positions //
 
@@ -75,9 +75,6 @@ void ftNess_YoyoApplyDamage(f32 unk_float, HSD_GObj* fighter_gobj) // Apply modi
 
 // 0x80114FF8 //
 // https://decomp.me/scratch/omC8O //
-
-void func_80041EE4(CollData*);
-void func_8004730C(CollData*, f32(*x)[6]);
 
 inline void push_ecb(CollData* a, Vec3* b)
 {
@@ -770,7 +767,7 @@ void ftNess_AttackHi4_Coll(HSD_GObj* fighter_gobj)   // Ness's Up Smash Collisio
 
     func_80084104(fighter_gobj);
 
-    if (((s32)fp->xE0_ground_or_air == AIR) && ((yoyo_GObj = GetFighterData_x222C(fighter_gobj)) != NULL))
+    if (((s32)fp->xE0_ground_or_air == GA_Air) && ((yoyo_GObj = GetFighterData_x222C(fighter_gobj)) != NULL))
     {
         func_802BE958(yoyo_GObj);
 
@@ -864,7 +861,7 @@ void ftNess_AttackHi4_Charge_Coll(HSD_GObj* fighter_gobj)   // Ness's Up Smash C
 
     fp = getFighter(fighter_gobj);
     func_80084104(fighter_gobj);
-    if (((s32)fp->xE0_ground_or_air == AIR) && ((yoyo_GObj = GetFighterData_x222C(fighter_gobj)) != NULL))
+    if (((s32)fp->xE0_ground_or_air == GA_Air) && ((yoyo_GObj = GetFighterData_x222C(fighter_gobj)) != NULL))
 
     {
         func_802BE958(yoyo_GObj);
@@ -995,7 +992,7 @@ void ftNess_AttackHi4_Release_Coll(HSD_GObj* fighter_gobj)   // Ness's Up Smash 
     fp = getFighter(fighter_gobj);
     func_80084104(fighter_gobj);
 
-    if (((s32)fp->xE0_ground_or_air == AIR) && ((yoyo_GObj = GetFighterData_x222C(fighter_gobj)) != NULL)) 
+    if (((s32)fp->xE0_ground_or_air == GA_Air) && ((yoyo_GObj = GetFighterData_x222C(fighter_gobj)) != NULL)) 
     {
         func_802BE958(yoyo_GObj);
         fighter_data2 = getFighter(fighter_gobj);

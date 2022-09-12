@@ -76,14 +76,15 @@ TEXT_O_FILES +=\
 	$(BUILD_DIR)/asm/melee/ft/ftparts.s.o\
 	$(BUILD_DIR)/src/melee/ft/ftcamera.c.o\
 	$(BUILD_DIR)/asm/melee/ft/ftcoll.s.o\
-	$(BUILD_DIR)/asm/melee/ft/code_8007C114.s.o\
-	$(BUILD_DIR)/asm/melee/ft/code_8007C630.s.o\
+	$(BUILD_DIR)/src/melee/ft/code_8007C114.c.o\
+	$(BUILD_DIR)/src/melee/ft/code_8007C630.c.o\
 	$(BUILD_DIR)/src/melee/ft/ftcommon.c.o\
-	$(BUILD_DIR)/asm/melee/ft/ftdrawcommon.s.o\
+	$(BUILD_DIR)/src/melee/ft/ftdrawcommon.c.o\
+	$(BUILD_DIR)/asm/melee/ft/ftdrawcommon_data.s.o\
 	$(BUILD_DIR)/src/melee/ft/ftcliffcommon.c.o\
 	$(BUILD_DIR)/src/melee/ft/ftwalljump.c.o\
-	$(BUILD_DIR)/asm/melee/ft/code_80081938.s.o\
-	$(BUILD_DIR)/asm/melee/ft/code_80081B38.s.o\
+	$(BUILD_DIR)/src/melee/ft/code_80081938.c.o\
+	$(BUILD_DIR)/src/melee/ft/code_80081B38.c.o\
 	$(BUILD_DIR)/asm/melee/ft/ft_unknown_005.s.o\
 	$(BUILD_DIR)/asm/melee/ft/ftdata.s.o\
 	$(BUILD_DIR)/src/melee/ft/ftlib.c.o\
@@ -681,7 +682,6 @@ TEXT_O_FILES +=\
 
 TEXT_O_FILES +=\
 	$(BUILD_DIR)/src/sysdolphin/baselib/jobj.c.o\
-	$(BUILD_DIR)/asm/sysdolphin/baselib/jobj.s.o\
 
 TEXT_O_FILES +=\
 	$(BUILD_DIR)/src/sysdolphin/baselib/displayfunc.c.o\
@@ -711,7 +711,6 @@ TEXT_O_FILES +=\
 
 TEXT_O_FILES +=\
 	$(BUILD_DIR)/src/sysdolphin/baselib/objalloc.c.o\
-	$(BUILD_DIR)/asm/sysdolphin/baselib/objalloc.s.o\
 
 TEXT_O_FILES +=\
 	$(BUILD_DIR)/src/sysdolphin/baselib/robj.c.o\
@@ -724,10 +723,10 @@ TEXT_O_FILES +=\
 	$(BUILD_DIR)/src/sysdolphin/baselib/wobj.c.o\
 
 TEXT_O_FILES +=\
-	$(BUILD_DIR)/asm/sysdolphin/baselib/fog.s.o\
+	$(BUILD_DIR)/src/sysdolphin/baselib/fog.c.o\
 
 TEXT_O_FILES +=\
-	$(BUILD_DIR)/asm/sysdolphin/baselib/perf.s.o\
+	$(BUILD_DIR)/src/sysdolphin/baselib/perf.c.o\
 
 TEXT_O_FILES +=\
 	$(BUILD_DIR)/src/sysdolphin/baselib/list.c.o\
@@ -771,7 +770,7 @@ TEXT_O_FILES +=\
 	$(BUILD_DIR)/asm/sysdolphin/baselib/leak.s.o\
 
 TEXT_O_FILES +=\
-	$(BUILD_DIR)/asm/sysdolphin/baselib/debug.s.o\
+	$(BUILD_DIR)/src/sysdolphin/baselib/debug.c.o\
 
 TEXT_O_FILES +=\
 	$(BUILD_DIR)/asm/sysdolphin/baselib/synth.s.o\
@@ -784,9 +783,8 @@ TEXT_O_FILES +=\
 
 TEXT_O_FILES +=\
 	$(BUILD_DIR)/asm/sysdolphin/baselib/gobjproc.s.o\
-	$(BUILD_DIR)/asm/sysdolphin/baselib/gobjplink.s.o\
+	$(BUILD_DIR)/src/sysdolphin/baselib/gobjplink.c.o\
 	$(BUILD_DIR)/src/sysdolphin/baselib/gobjgxlink.c.o\
-	$(BUILD_DIR)/asm/sysdolphin/baselib/gobjgxlink.s.o\
 	$(BUILD_DIR)/src/sysdolphin/baselib/gobjobject.c.o\
 	$(BUILD_DIR)/src/sysdolphin/baselib/gobjuserdata.c.o\
 
